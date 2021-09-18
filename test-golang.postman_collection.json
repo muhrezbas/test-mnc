@@ -1,0 +1,196 @@
+{
+	"info": {
+		"_postman_id": "745e5025-6e22-4e91-a3c9-9e8c85a2ca91",
+		"name": "test-golang",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "hello",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:9700/api",
+					"host": [
+						"localhost"
+					],
+					"port": "9700",
+					"path": [
+						"api"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "palindrome",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:9700/api/palindrome?text=kata",
+					"host": [
+						"localhost"
+					],
+					"port": "9700",
+					"path": [
+						"api",
+						"palindrome"
+					],
+					"query": [
+						{
+							"key": "text",
+							"value": "kata"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "language hardcode",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:9700/api/language",
+					"host": [
+						"localhost"
+					],
+					"port": "9700",
+					"path": [
+						"api",
+						"language"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post language",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"language\": \"Python\",\n    \"appeared\": 1991,\n    \"created\": [\n        \"Guido van Rossum\"\n    ],\n    \"functional\": true,\n    \"object-oriented\": true,\n    \"relation\": {\n        \"influenced-by\": [\n            \"C\",\n            \"C++\",\n            \"ALGOL 68\",\n            \"Ada\",\n            \"Haskell\",\n            \"Java\",\n            \"Lisp\"\n        ],\n        \"influences\": [\n            \"Go\",\n            \"CoffeeScript\",\n            \"JavaScript\",\n            \"Julia\",\n            \"Ruby\",\n            \"Swift\"\n        ]\n    }\n}\n// {\n//     \"language\": \"Go\",\n//     \"appeared\": 2009,\n//     \"created\": [\n//         \"Robert Griesemer\",\n//         \"Rob Pike\",\n//         \"Ken Thompson\"\n//     ],\n//     \"functional\": true,\n//     \"object-oriented\": false,\n//     \"relation\": {\n//         \"influenced-by\": [\n//             \"C\",\n//             \"Python\",\n//             \"Pascal\",\n//             \"Smalltalk\",\n//             \"Modula\"\n//         ],\n//         \"influences\": [\n//             \"Odin\",\n//             \"Crystal\",\n//             \"Zig\"\n//         ]\n//     }\n// }\n\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9700/api/language",
+					"host": [
+						"localhost"
+					],
+					"port": "9700",
+					"path": [
+						"api",
+						"language"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "language All",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:9700/api/languages",
+					"host": [
+						"localhost"
+					],
+					"port": "9700",
+					"path": [
+						"api",
+						"languages"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "language By ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:9700/api/language/0",
+					"host": [
+						"localhost"
+					],
+					"port": "9700",
+					"path": [
+						"api",
+						"language",
+						"0"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "language Edit By ID",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"language\": \"Go\",\n    \"appeared\": 2009,\n    \"created\": [\n        \"Robert Griesemer\",\n        \"Rob Pike\",\n        \"Ken Thompson\"\n    ],\n    \"functional\": true,\n    \"object-oriented\": false,\n    \"relation\": {\n        \"influenced-by\": [\n            \"C\",\n            \"Python\",\n            \"Pascal\",\n            \"Smalltalk\",\n            \"Modula\"\n        ],\n        \"influences\": [\n            \"Odin\",\n            \"Crystal\",\n            \"Zig\"\n        ]\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9700/api/language/1",
+					"host": [
+						"localhost"
+					],
+					"port": "9700",
+					"path": [
+						"api",
+						"language",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "language Delete By ID",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"language\": \"Go!\",\n    \"appeared\": 2009,\n    \"created\": [\n        \"Robert Griesemer\",\n        \"Rob Pike\",\n        \"Ken Thompson\"\n    ],\n    \"functional\": true,\n    \"object-oriented\": false,\n    \"relation\": {\n        \"influenced-by\": [\n            \"C\",\n            \"Python\",\n            \"Pascal\",\n            \"Smalltalk\",\n            \"Modula\"\n        ],\n        \"influences\": [\n            \"Odin\",\n            \"Crystal\",\n            \"Zig\"\n        ]\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9700/api/language/0",
+					"host": [
+						"localhost"
+					],
+					"port": "9700",
+					"path": [
+						"api",
+						"language",
+						"0"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
